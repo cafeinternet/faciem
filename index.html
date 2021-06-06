@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FACIEM</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-gif-component/master/dist/aframe-gif-component.min.js"></script>
+
+</head>
+<body>
+    <a-scene>
+        <a-entity environment="ground:none;gridColor:#000000;dressingColor:#0000;groundColor2:#0000;groundColor:#0000;active:true;skyType:atmosphere;skyColor:#88c;horizonColor:#ddd;lightPosition:0 -0.01 -0.46;fog:0.7;dressingAmount:100;preset:starry" preset-switcher="" id="environment"><a-entity class="environment" position="0 50 0" light="intensity:0.08913300229539221;groundColor:#0000;color:#a48387;type:hemisphere"></a-entity><a-entity class="environment" position="0 -0.01 -0.46" light="shadowCameraLeft:-10;shadowCameraBottom:-10;shadowCameraRight:10;shadowCameraTop:10;intensity:0.08913300229539221"></a-entity><a-entity rotation="-90 0 0" class="environmentGround environment" visible="false" scale="1 1 3" shadow="cast:false;receive:false"></a-entity><a-entity class="environmentDressing environment" visible="false"></a-entity><a-sky radius="200" theta-length="110" class="environment" geometry="" material="sunPosition:0 -0.021733995409215574 -0.9997637888239164;shader:skyshader;npot:false;color:#fff"></a-sky><a-entity id="stars"></a-entity></a-entity>
+        <a-plane position="0.73244 -18.98522 -4" rotation="-90 0 0" width="4" height="4" src="./piso.jpg" material="" geometry="" scale="50 50 50"></a-plane>
+
+        <a-light type="ambient" color="#FEF09C"></a-light>
+
+        <a-entity camera="" position="0.35785 1.31865 45.65222" wasd-controls="" rotation="" look-controls="" aframe-injected="" data-aframe-inspector-original-camera=""></a-entity>
+
+
+
+    </a-assets timeout="60000">
+
+        <img id="rostro1" src="./3.jpg">
+        <img id="rostro2" src="./4.jpg">
+        <img id="rostro3" src="./5.jpg">
+
+        <a-asset-item id="cabezas" src="./rostross.gltf" ></a-asset-item>
+
+        <video id="rostromov1" autoplay loop="true" src="./mov1.mp4"></video>
+
+
+    </a-assets>
+
+    <a-gltf-model src="#cabezas" material="" geometry=""scale="2 2 2" position=" -10.215.40 -2.53 4.5" rotation="-10.174 0 0"></a-gltf-model>
+
+    
+
+    <a-image src="#rostro2" material="" geometry="" scale="20 20 20" position="-27.35834 5 6.40647"></a-image>
+    <a-image src="#rostro1" material="" geometry="" scale="20 20 20" position="2.13994 5 5.85217"></a-image>
+    <a-image src="#rostro3" material="" geometry="" scale="20 20 20" position="29.27628 5 5.58948"></a-image>
+
+
+    <a-light type="ambient" color="#FEF09C" position="-10 5 6"></a-light>
+    <a-light type="ambient" color="#F70909" position="1000 5 6"></a-light>
+
+
+    <a-video src="#rostromov1" material="" geometry="" scale="40 40 40" position="4 7.4 -20.163"></a-video>
+
+
+    <a-entity color="#E4BFA1" geometry="primitive:sphere; radius:3" position="-16.21 -4.72 45.290" rotation="-92.67 .9.85 87.45" material="shader:gif;src:url(./assets/1.gif); ; transparent: true;alphaTest:0.5; side:double" ></a-entity>
+
+    <a-entity geometry="primitive:sphere; radius:4" position="-5.99 -2.42 52.98" rotation="-52.19 -35.67 0"  material="shader:gif;src:url(./assets/2.gif); ; transparent: true;alphaTest:0.5; side:double" ></a-entity>
+
+    <a-entity geometry="primitive:sphere; radius:5" position="5.71 0.37 56.28"   material="shader:gif;src:url(./assets/3.gif); ; transparent: true;alphaTest:0.5; side:double" ></a-entity>
+
+    <a-entity geometry="primitive:sphere; radius:6" position="16.955 1.429 51.356"  material="shader:gif;src:url(./assets/5.gif); ; transparent: true;alphaTest:0.5; side:double" ></a-entity>
+
+    <a-entity geometry="primitive:sphere; radius:7"position="30.561 2.289 48.281"   material="shader:gif;src:url(./assets/6.gif); ; transparent: true;alphaTest:0.5; side:double" ></a-entity>
+
+    <a-entity geometry="primitive:sphere; radius:8" position="38.38 1.250 35.38" rotation="-1.45 -2.613 0.463"  material="shader:gif;src:url(./assets/7.gif); ; transparent: true;alphaTest:0.5; side:double" ></a-entity>
+
+    <a-entity geometry="primitive:sphere; radius:2" position="-24.232 -6.952 36"  material="shader:gif;src:url(./assets/8.gif); ; transparent: true;alphaTest:0.5; side:double" ></a-entity>
+
+    <a-entity geometry="primitive:sphere; radius:1" position="-30.989 -11.338 18.08" material="shader:gif;src:url(./assets/9.gif); ; transparent: true;alphaTest:0.5; side:double" ></a-entity>
+
+
+      
+<!--     <a-sphere color="#E4BFA1"  position="-16.21 -4.72 45.290" rotation="-92.67 .9.85 87.45" radius="3" src="#rostromov1"></a-sphere> -->
+<!--     <a-sphere color="#DAAE8B" position="-5.99 -2.42 52.98" rotation="-52.19 -35.67 0" radius="4" src="#rostromov2"></a-sphere>
+    <a-sphere color="#DAAE8B" position="5.71 0.37 56.28" radius="5" src="#rostromov3"></a-sphere>
+    <a-sphere color="#DEB08B" position="16.955 1.429 51.356" radius="6" src="#rostromov4"></a-sphere>
+    <a-sphere color="#EBA671" position="30.561 2.289 48.281" radius="7" src="./mov6.mp4"></a-sphere>
+    <a-sphere color="#EFA165" position="38.38 1.250 35.38" rotation="-1.45 -2.613 0.463" radius="8" src="./mov7.mp4"></a-sphere>
+    <a-sphere color="#D8B190" position="-24.232 -6.952 36" radius="2" src="./mov8.mp4"></a-sphere>
+    <a-sphere color="#EECEB3" position="-30.989 -11.338 18.08" radius="1" src="./mov9.mp4"></a-sphere> -->
+
+
+
+
+    <a-plane position="-2.83781 29.65035 4" rotation="90 0 0" width="4" height="4" src="./pisoss.jpg" material="" geometry="" scale="90 90 90"></a-plane>
+
+    <a-plane position="-5.9278 10.79097 -56.94175" rotation="-1.0622637521725464 145.87047097794655 -149.9315958298338" width="4" height="4" src="./pisoss.jpg" material="" geometry="primitive: torusKnot" scale="80 80 80"></a-plane>
+    <a-sound src="src:url(corazon.mp3)" autoplay="true" position="6 1.3 69" volume="0.5" loop="true" type="ambient"></a-sound>
+    <a-sound src="src:url(corazon.mp3)" autoplay="true" position="2 5 5" volume="0.8" loop="true" type="ambient"></a-sound>
+    <a-sound src="src:url(FACIEMM.mp3)" autoplay="true" position="2 5 69" volume="2" loop="true"type="ambient"></a-sound>
+
+    <a-entity camera="" position="5.51328 1.31865 69.98752" wasd-controls="" rotation="" look-controls="" aframe-injected="" data-aframe-inspector-original-camera=""></a-entity>
+    </a-scene>
+
+</body>
+</html>
